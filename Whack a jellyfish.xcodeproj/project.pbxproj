@@ -12,6 +12,8 @@
 		0BF5B99B1F403370003C2503 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0BF5B9991F403370003C2503 /* Main.storyboard */; };
 		0BF5B99D1F403370003C2503 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0BF5B99C1F403370003C2503 /* Assets.xcassets */; };
 		0BF5B9A01F403370003C2503 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0BF5B99E1F403370003C2503 /* LaunchScreen.storyboard */; };
+		0BF5B9AA1F4044E3003C2503 /* Textures in Resources */ = {isa = PBXBuildFile; fileRef = 0BF5B9A91F4044E3003C2503 /* Textures */; };
+		0BF5B9AD1F404573003C2503 /* art.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = 0BF5B9AC1F404573003C2503 /* art.scnassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +24,8 @@
 		0BF5B99C1F403370003C2503 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0BF5B99F1F403370003C2503 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0BF5B9A11F403370003C2503 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0BF5B9A91F4044E3003C2503 /* Textures */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Textures; path = "../../../Downloads/Spongebob Jellyfish (3)/Textures"; sourceTree = "<group>"; };
+		0BF5B9AC1F404573003C2503 /* art.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = art.scnassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,12 +58,14 @@
 		0BF5B9941F403370003C2503 /* Whack a jellyfish */ = {
 			isa = PBXGroup;
 			children = (
+				0BF5B9A91F4044E3003C2503 /* Textures */,
 				0BF5B9951F403370003C2503 /* AppDelegate.swift */,
 				0BF5B9971F403370003C2503 /* ViewController.swift */,
 				0BF5B9991F403370003C2503 /* Main.storyboard */,
 				0BF5B99C1F403370003C2503 /* Assets.xcassets */,
 				0BF5B99E1F403370003C2503 /* LaunchScreen.storyboard */,
 				0BF5B9A11F403370003C2503 /* Info.plist */,
+				0BF5B9AC1F404573003C2503 /* art.scnassets */,
 			);
 			path = "Whack a jellyfish";
 			sourceTree = "<group>";
@@ -125,6 +131,8 @@
 			files = (
 				0BF5B9A01F403370003C2503 /* LaunchScreen.storyboard in Resources */,
 				0BF5B99D1F403370003C2503 /* Assets.xcassets in Resources */,
+				0BF5B9AD1F404573003C2503 /* art.scnassets in Resources */,
+				0BF5B9AA1F4044E3003C2503 /* Textures in Resources */,
 				0BF5B99B1F403370003C2503 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -325,6 +333,7 @@
 				0BF5B9A61F403370003C2503 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
