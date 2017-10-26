@@ -1,29 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13156.6" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13189.4" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13137.5"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13165.3"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
-    <customFonts key="customFonts">
-        <array key="AvenirNext.ttc">
-            <string>AvenirNext-Regular</string>
-        </array>
-    </customFonts>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Whack_a_jellyfish" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="YES" id="8bC-Xf-vdC">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <arscnView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5B1-Ay-KDI">
-                                <rect key="frame" x="0.0" y="70" width="375" height="597"/>
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
                             </arscnView>
                             <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OiT-ox-D96">
                                 <rect key="frame" x="16" y="547" width="100" height="100"/>
@@ -47,44 +42,22 @@
                                     <action selector="reset:" destination="BYZ-38-t0r" eventType="touchUpInside" id="DDG-AE-PE4"/>
                                 </connections>
                             </button>
-                            <view contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sNp-6V-zDo">
-                                <rect key="frame" x="0.0" y="20" width="375" height="50"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Let's play" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ip9-Kg-F4J">
-                                        <rect key="frame" x="141.5" y="10" width="93.5" height="30.5"/>
-                                        <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="22"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                </subviews>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstItem="ip9-Kg-F4J" firstAttribute="centerX" secondItem="sNp-6V-zDo" secondAttribute="centerX" id="Mpz-6E-su1"/>
-                                    <constraint firstItem="ip9-Kg-F4J" firstAttribute="centerY" secondItem="sNp-6V-zDo" secondAttribute="centerY" id="ZFZ-Sj-Mu8"/>
-                                    <constraint firstAttribute="height" constant="50" id="rdJ-Qh-XDI"/>
-                                </constraints>
-                            </view>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="sNp-6V-zDo" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="FIM-NQ-Iyz"/>
+                            <constraint firstItem="5B1-Ay-KDI" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="9zn-sr-030"/>
                             <constraint firstItem="5B1-Ay-KDI" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="Gwp-c7-Mzz"/>
                             <constraint firstItem="5B1-Ay-KDI" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="K6O-xo-p6u"/>
-                            <constraint firstItem="sNp-6V-zDo" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="UOh-cq-1KJ"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="RDz-E9-gMD" secondAttribute="trailing" constant="20" id="aj9-fz-48H"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="RDz-E9-gMD" secondAttribute="bottom" constant="20" id="fFu-RX-bzg"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="OiT-ox-D96" secondAttribute="bottom" constant="20" id="gz9-TI-PFt"/>
-                            <constraint firstItem="sNp-6V-zDo" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="jj8-Jp-SQw"/>
                             <constraint firstItem="OiT-ox-D96" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="kFf-NI-D1c"/>
                             <constraint firstItem="5B1-Ay-KDI" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="lmf-QU-8Um"/>
-                            <constraint firstItem="5B1-Ay-KDI" firstAttribute="top" secondItem="sNp-6V-zDo" secondAttribute="bottom" id="zQA-Ef-Iv9"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
                         <outlet property="SceneView" destination="5B1-Ay-KDI" id="oNu-QE-IK0"/>
-                        <outlet property="play" destination="OiT-ox-D96" id="2Ws-oH-hqJ"/>
-                        <outlet property="timerLabel" destination="ip9-Kg-F4J" id="Usz-Ry-g64"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
