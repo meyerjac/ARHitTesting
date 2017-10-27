@@ -8,10 +8,17 @@
 
 import UIKit
 import ARKit
+
+
 class ViewController: UIViewController {
-    @IBOutlet weak var play: UIButton!
     
+    var timer = Timer()
+    
+    var time = 10
+    
+    @IBOutlet weak var play: UIButton!
     @IBOutlet weak var SceneView: ARSCNView!
+    @IBOutlet weak var timeRemainingLabel: UILabel!
     
     let configuration = ARWorldTrackingConfiguration()
     
@@ -29,6 +36,7 @@ class ViewController: UIViewController {
     }
     
     @IBAction func play(_ sender: Any) {
+       timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(ViewController.countDown), userInfo: nil, repeats: true)
         self.addNode()
         self.play.isEnabled = false
     }
@@ -53,9 +61,13 @@ class ViewController: UIViewController {
             let results = hitTest.first!
             let node = results.node
             if node.animationKeys.isEmpty {
-                
-            self.animateNode(node: node)
-  
+                SCNTransaction.begin()
+                self.animateNode(node: node)
+                SCNTransaction.completionBlock = {
+                    node.removeFromParentNode()
+                    self.addNode()
+                }
+                SCNTransaction.commit()
                 }
             }
         }
@@ -69,10 +81,26 @@ class ViewController: UIViewController {
         spin.autoreverses = true
         node.addAnimation(spin, forKey: "position")
     }
+    
+    func randomNumbers(firstNum: CGFloat, secondNum: CGFloat) -> CGFloat {
+        return CGFloat(arc4random()) / CGFloat(UINT32_MAX) * abs(firstNum - secondNum) + min(firstNum, secondNum)
+    }
+    
+    @objc func countDown() {
+        
+        let timeRemaining = timeRemainingLabel.text
+        
+        let timeRemainingInteger = Int(timeRemaining!)! - 1
+        
+        timeRemainingLabel.text = String(timeRemainingInteger)
+        
+        if timeRemainingInteger == 0 {
+            timer.invalidate()
+            //play a cool ringtonw
+        }
+    }
 }
 
-func randomNumbers(firstNum: CGFloat, secondNum: CGFloat) -> CGFloat {
-    return CGFloat(arc4random()) / CGFloat(UINT32_MAX) * abs(firstNum - secondNum) + min(firstNum, secondNum)
-}
+
 
 
